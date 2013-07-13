@@ -1,0 +1,6 @@
+DROP	WAVE "sounds\bubblesdrop.wav"
+CLICK	WAVE "sounds\buttonclick.wav"
+SLIDE	WAVE "sounds\buttonslide.wav"
+HIGHSCORE	WAVE "sounds\highscore.wav"
+
+

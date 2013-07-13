@@ -1,0 +1,73 @@
+unit Neueintrag_Unit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons;
+
+type
+  TNeueintrag = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Nachname: TEdit;
+    Vorname: TEdit;
+    Adresse: TEdit;
+    Ok: TBitBtn;
+    Abbrechen: TBitBtn;
+    procedure OKClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure AbbrechenClick(Sender: TObject);
+  private
+    { Private-Deklarationen }
+  public
+    { Public-Deklarationen }
+  end;
+
+var
+  Neueintrag: TNeueintrag;
+
+implementation
+
+uses adressbuch_Unit;
+
+{$R *.DFM}
+
+procedure TNeueintrag.OKClick(Sender: TObject);
+begin
+  If (Adresse.Text <> '') then if (Nachname.Text <> '') then if (Vorname.Text <> '') then
+     Begin
+       if Adressbuch.ButtonNew.tag = 1 then Begin;
+          adressbuch.ListView.Items.Insert(0).Caption := '';
+          adressbuch.ListView.Items.Item[0].SubItems.add(Vorname.text);
+          adressbuch.ListView.Items.Item[0].SubItems.add(Adresse.text);
+          adressbuch.ListView.Items.Item[0].Caption := Nachname.text;
+       End
+       else
+       Begin;
+         adressbuch.ListView.Items.Item[adressbuch.ListView.Selected.Index].SubItems.Strings[0] := Vorname.text;
+         adressbuch.ListView.Items.Item[adressbuch.ListView.Selected.Index].SubItems.Strings[1] := Adresse.text;
+         adressbuch.ListView.Items.Item[adressbuch.ListView.Selected.Index].Caption := Nachname.text;
+       End;
+       Nachname.Text := '';
+       Vorname.Text := '';
+       Adresse.Text := '';
+       Neueintrag.Close;
+     End
+   Else
+      MessageDlg('Nicht alle Felder korrekt ausgefüllt', mterror, [mbOk], 0)
+end;
+
+procedure TNeueintrag.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Adressbuch.enabled := True;
+  adressbuch.ButtonNew.Tag := 0;
+end;
+
+procedure TNeueintrag.AbbrechenClick(Sender: TObject);
+begin
+  Neueintrag.close
+end;
+
+end.

@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 192
+  Top = 107
+  Width = 549
+  Height = 278
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object label0: TLabel
+    Left = 8
+    Top = 64
+    Width = 26
+    Height = 20
+    Caption = 'Rot'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 8
+    Top = 40
+    Width = 36
+    Height = 20
+    Caption = 'Grün'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 16
+    Width = 32
+    Height = 20
+    Caption = 'Blau'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object red: TLabel
+    Left = 496
+    Top = 64
+    Width = 9
+    Height = 20
+    Caption = '0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object green: TLabel
+    Left = 496
+    Top = 40
+    Width = 9
+    Height = 20
+    Caption = '0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object blue: TLabel
+    Left = 496
+    Top = 16
+    Width = 9
+    Height = 20
+    Caption = '0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 104
+    Width = 46
+    Height = 20
+    Caption = 'Farbe:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Farbe: TLabel
+    Left = 80
+    Top = 104
+    Width = 93
+    Height = 20
+    Caption = '$00 00 00 00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object RedBar: TScrollBar
+    Left = 56
+    Top = 64
+    Width = 425
+    Height = 17
+    Max = 255
+    PageSize = 0
+    Position = 1
+    TabOrder = 2
+    OnChange = RedBarChange
+  end
+  object GreenBar: TScrollBar
+    Left = 56
+    Top = 40
+    Width = 425
+    Height = 17
+    Max = 255
+    PageSize = 0
+    Position = 1
+    TabOrder = 1
+    OnChange = GreenBarChange
+  end
+  object Bluebar: TScrollBar
+    Left = 56
+    Top = 16
+    Width = 425
+    Height = 17
+    Max = 255
+    PageSize = 0
+    Position = 1
+    TabOrder = 0
+    OnChange = BluebarChange
+  end
+  object FarbBox: TPanel
+    Left = 16
+    Top = 136
+    Width = 489
+    Height = 89
+    BevelOuter = bvLowered
+    Color = clBlack
+    TabOrder = 3
+  end
+end

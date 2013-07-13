@@ -1,0 +1,7 @@
+CUR1	ANI "cursor\normal.ani"
+DROP	WAVE "sounds\bubblesdrop.wav"
+CLICK	WAVE "sounds\buttonclick.wav"
+SLIDE	WAVE "sounds\buttonslide.wav"
+HIGHSCORE	WAVE "sounds\highscore.wav"
+
+

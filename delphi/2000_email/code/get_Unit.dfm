@@ -1,0 +1,55 @@
+object Get: TGet
+  Left = 18
+  Top = 157
+  Width = 763
+  Height = 375
+  Caption = 'E-Mail auf Server checken'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 8
+    Top = 8
+    Width = 105
+    Height = 33
+    Caption = 'checken'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object ListView: TListView
+    Left = 8
+    Top = 56
+    Width = 737
+    Height = 281
+    Columns = <
+      item
+        Caption = 'Von'
+        Width = 230
+      end
+      item
+        Caption = 'Betreff'
+        Width = 230
+      end
+      item
+        Caption = 'Größe'
+        Width = 70
+      end
+      item
+        Caption = 'Datum'
+        Width = 200
+      end>
+    ColumnClick = False
+    FullDrag = True
+    MultiSelect = True
+    RowSelect = True
+    TabOrder = 1
+    ViewStyle = vsReport
+  end
+end

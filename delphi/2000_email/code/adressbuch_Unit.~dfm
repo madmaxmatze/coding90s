@@ -1,0 +1,103 @@
+object Adressbuch: TAdressbuch
+  Left = 130
+  Top = 123
+  Width = 524
+  Height = 341
+  Caption = 'Adressbuch'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 516
+    Height = 57
+    Cursor = crArrow
+    ButtonHeight = 52
+    ButtonWidth = 93
+    Caption = 'ToolBar1'
+    Flat = True
+    HotImages = Main.HotImages
+    Images = Main.Images
+    ShowCaptions = True
+    TabOrder = 0
+    Transparent = True
+    object ButtonNew: TToolButton
+      Left = 0
+      Top = 0
+      Hint = 'Neuen Eintrag erstellen'
+      Caption = 'Neuer Eintrag'
+      ImageIndex = 18
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ButtonNewClick
+    end
+    object ButtonEdit: TToolButton
+      Left = 93
+      Top = 0
+      Hint = 'Markierten Eintrag bearbeiten'
+      Caption = 'Eintrag bearbeiten'
+      ImageIndex = 19
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ButtonEditClick
+    end
+    object ButtonClear: TToolButton
+      Left = 186
+      Top = 0
+      Hint = 'Markierten Eintrag löschen'
+      Caption = 'Eintrag löschen'
+      ImageIndex = 20
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ButtonClearClick
+    end
+  end
+  object ListView: TListView
+    Left = 0
+    Top = 57
+    Width = 516
+    Height = 257
+    Hint = 'Häckchen für Quick_Select beim NAchrichten schreiben'
+    Align = alClient
+    Checkboxes = True
+    Columns = <
+      item
+        Caption = 'Nachname'
+        Width = 100
+      end
+      item
+        Caption = 'Vorname'
+        Width = 100
+      end
+      item
+        Caption = 'E-Mail Adresse'
+        Width = 200
+      end>
+    FullDrag = True
+    Items.Data = {
+      1E0100000500000000000000FFFFFFFFFFFFFFFF0200000000000000074772F6
+      747363680644616E69656C0E5265616C44616740676D782E646500000000FFFF
+      FFFFFFFFFFFF0200000000000000054B6C61747404416E6E6513446965486173
+      656E4D416D6140676D782E646505000000FFFFFFFFFFFFFFFF02000000000000
+      00054B6C696E6B084D617474686961730F4465724B696C696B40676D782E6465
+      00000000FFFFFFFFFFFFFFFF0200000000000000054D656E7A65054D6972636F
+      114D6972636F4D656E7A6540676D782E646500000000FFFFFFFFFFFFFFFF0200
+      000000000000084E69747A73636865074D617468696173124D61644D61784D41
+      747A6540676D782E6465FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+    ReadOnly = True
+    RowSelect = True
+    ParentShowHint = False
+    ShowHint = True
+    SortType = stText
+    TabOrder = 1
+    ViewStyle = vsReport
+  end
+end

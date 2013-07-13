@@ -1,0 +1,107 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  ExtCtrls;
+
+type
+  StrichType = record
+    x1 : integer;
+    x2 : integer;
+    y1 : integer;
+    y2 : integer;
+    c : Longword;
+  End;
+  TForm1 = class(TForm)
+    Timer1: TTimer;
+    procedure FormCreate(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+
+  private
+    { Private-Deklarationen }
+  public
+    { Public-Deklarationen }
+  end;
+
+var
+  Form1: TForm1;
+  x1, x2, y1, y2, dx1, dx2, dy1, dy2, s, dc, c, maxline : Integer;
+  Strich : array[0..100] of Strichtype;
+
+implementation
+
+{$R *.DFM}
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Randomize;
+  Strich[1].x1 := 1;
+  Strich[1].y1 := 300;
+  Strich[1].x2 := 300;
+  Strich[1].y2 := 1;
+  Strich[1].c := 0;
+  dx1 := 4;
+  dx2 := 3;
+  dy1 := 10;
+  dy2 := 9;
+  MaxLine := 200;
+  dc := 1;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+var a : byte;
+begin
+{  with Canvas do
+    Begin;
+      pen.color := c;
+      if s = 0 then Begin; moveto(x1, y1); lineto(x2,y2); end;
+      if s = 1 then Ellipse(X1, Y1, X2, Y2);
+      if s = 2 then rectangle(X1, Y1, X2, Y2);
+    End;}
+
+  Strich[Maxline].c := 0;
+
+  For a := Maxline downto 1 do
+    Begin;
+      Canvas.pen.color := Strich[A].c;
+      Canvas.moveto(strich[A].x1, strich[A].y1); Canvas.lineto(strich[A].x2,strich[A].y2);
+      Strich[A] := Strich[A - 1];
+    End;
+
+  Strich[1].c := Strich[2].c + dc;
+
+  If (Strich[1].C = 255) and (dc = 1) then dc := 256;
+  If (Strich[1].C = 65535) and (dc = 256) then dc := 256 * 256;
+  If (Strich[1].C = 16777215) and (dc = 256 * 256) then Dc := -1;
+  If (Strich[1].C = 16776960) and (dc = -1) then dc := -256;
+  If (Strich[1].C = 16711680) and (dc = -256) then dc := -256 * 256;
+  IF (Strich[1].C = 0) and (dc = -256 * 256) then DC := 1;
+
+  Strich[1].x1 := Strich[2].x1 + dx1;
+  Strich[1].y1 := Strich[2].y1 + dy1;
+  Strich[1].x2 := Strich[2].x2 + dx2;
+  Strich[1].y2 := Strich[2].y2 + dy2;
+
+  If Strich[1].x1 > form1.Width - 8 then dx1 := -1 * (Random(6) + 4);
+  If Strich[1].x1 < 0 then dx1 := (Random(6) + 4);
+  If Strich[1].x2 > form1.Width - 8 then dx2 := -1 * (Random(6) + 4);
+  If Strich[1].x2 < 0 then dx2 := (Random(6) + 4);
+  If Strich[1].y1 > form1.Height - 29 then dy1 := -1 * (Random(6) + 4);
+  If Strich[1].y1 < 0 then dy1 := (Random(6) + 4);
+  If Strich[1].y2 > form1.Height - 29 then dy2 := -1 * (Random(6) + 4);
+  If Strich[1].y2 < 0 then dy2 := (Random(6) + 4);
+end;
+
+procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+//  if Key = #32 then S := s + 1;
+//    If s > 2 then s := 0;
+//  if Key = #13 then form1.refresh;
+end;
+
+end.
+
+

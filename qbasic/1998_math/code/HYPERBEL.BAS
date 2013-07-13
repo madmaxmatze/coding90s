@@ -1,0 +1,27 @@
+CLS
+SCREEN 12
+
+LOCATE 17, 1: PRINT "-300         -200        -100         0            100          200         300"
+
+LOCATE 3, 37: PRINT "200"
+LOCATE 9, 37: PRINT "100"
+LOCATE 22, 36: PRINT "-100"
+LOCATE 28, 36: PRINT "-200"
+
+FOR X = -20 TO 20 STEP .01
+    PSET (320 + X, 240 - X * X), 9
+NEXT X
+
+LINE (320, 0)-(320, 439), 15
+LINE (0, 240)-(639, 240), 15
+
+FOR A = 20 TO 639 STEP 50
+    LINE (A, 238)-(A, 242), 15
+NEXT A
+
+FOR A = 40 TO 480 STEP 50
+    LINE (318, A)-(322, A), 15
+NEXT A
+
+SLEEP
+
