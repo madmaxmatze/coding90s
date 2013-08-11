@@ -1,0 +1,45 @@
+Program Hunderennen;
+
+Uses Crt;
+
+Var H1   : Byte;
+    H2   : Byte;
+    Test : Longint;
+
+Begin;
+  ClrScr;
+  For Test := 1 to 5 Do
+      Begin;
+        GotoXY(60, Test);
+        Write('º');
+      End;
+  GotoXY(58, 6); Write('Ziel');
+  Randomize;
+  Repeat;
+    H1 := H1 + Random(3);
+    H2 := H2 + Random(3);
+    GotoXY(1, 1); Write(H1);
+    GotoXY(1, 3); Write(H2);
+    For Test := 1 to H1 Do
+        Begin;
+          GotoXY(Test, 2);
+          Write('>')
+        End;
+    For Test := 1 to H2 Do
+        Begin;
+          GotoXY(Test, 4);
+          Write('>')
+        End;
+    For test := 1 to 1000000 Do;
+  Until (H1 > 59) or (H2 > 59);
+
+  If H1 > 59 Then Test := 1;
+  If H2 > 59 Then Test := 2;
+  GotoXY(20, 10); Write('Das Rennen ist vorbei - Hund ', Test, ' hat gewonnen');
+
+  GotoXY(20, 10);
+  If (H1 > 59) and (H2 > 59) then Write('Das Rennen ist vorbei - es endete unentschieden');
+
+  Repeat;
+  Until Keypressed;
+End.

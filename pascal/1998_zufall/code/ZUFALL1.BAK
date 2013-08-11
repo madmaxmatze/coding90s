@@ -1,0 +1,31 @@
+Program Zufall;
+
+Uses Crt;
+
+Var Feld : Array[1..3, 1..20] of LongInt;
+    A, B, X, Y : Integer;
+
+
+Begin;
+  ClrScr;
+  Randomize;
+  For A := 1 to 10000 Do
+      Begin;
+        X := 2; Y := 1;
+        Repeat;
+          B := Random(3) + 1;
+          If B = 1 then Inc(X);
+          If B = 2 then Inc(Y);
+          If B = 3 then Dec(X);
+        Until X <> 2;
+        Inc(Feld[X, Y]);
+     End;
+  For A := 1 To 3 Do
+      For B := 1 To 20 Do
+          Begin;
+            GotoXY(A * 6 - 5, B); Write(Feld[A, B]);
+          End;
+  Repeat
+  Until
+  KeyPressed;
+End.

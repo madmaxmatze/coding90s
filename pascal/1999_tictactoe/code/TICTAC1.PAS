@@ -1,0 +1,32 @@
+Program TicTacToe;
+
+Uses Crt, Graph;
+
+Begin
+  ClrScr;
+  GotoXY(28, 7); Writeln('ษอออออออหอออออออหอออออออป');
+  GotoXY(28, 8); Writeln('บ       บ       บ       บ');
+  GotoXY(28, 9); Writeln('บ   1   บ   2   บ   3   บ');
+  GotoXY(28,10); Writeln('บ       บ       บ       บ');
+  GotoXY(28,11); Writeln('ฬอออออออฮอออออออฮอออออออน');
+  GotoXY(28,12); Writeln('บ       บ       บ       บ');
+  GotoXY(28,13); Writeln('บ   4   บ   5   บ   6   บ');
+  GotoXY(28,14); Writeln('บ       บ       บ       บ');
+  GotoXY(28,15); Writeln('ฬอออออออฮอออออออฮอออออออน');
+  GotoXY(28,16); Writeln('บ       บ       บ       บ');
+  GotoXY(28,17); Writeln('บ   7   บ   8   บ   9   บ');
+  GotoXY(28,18); Writeln('บ       บ       บ       บ');
+  GotoXY(28,19); Writeln('ศอออออออสอออออออสอออออออผ');
+  Repeat;
+  Until KeyPressed;
+End.
+
+
+
+
+
+
+
+
+
+

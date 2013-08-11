@@ -1,0 +1,22 @@
+Program Zufall;
+
+Uses Crt;
+
+
+Var Test : LongInt;
+    A : array[1..20] of LongInt;
+
+Begin;
+  ClrScr;
+  Repeat
+    Inc(A[Random(21)]);
+  Until A[1] > 10000;
+
+  For Test := 1 to 20 Do
+      Begin;
+        GotoXY(1, Test); Write('A(',Test,') = ', A[Test]);
+      End;
+
+  Repeat;
+  Until KeyPressed;
+End.

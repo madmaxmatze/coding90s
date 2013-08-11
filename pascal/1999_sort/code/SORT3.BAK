@@ -1,0 +1,34 @@
+Program Zufall;
+
+Uses Crt;
+
+Const Feld : array[1..10] of String[20] = ('Rieke','Zoro','Mirco','Mo','Marcus','Basti','Martin','Gregor','Rieke','Oli');
+
+Var A, B : Byte;
+    S : String;
+
+Begin;
+  ClrScr;
+
+  For a := 1 to 10 Do
+      Begin;
+        GotoXY(1, A); Write('Feld(',A,') = ', Feld[A]);
+      End;
+
+  For A := 1 to 10 Do
+      For B := 1 to 9 Do
+          If Feld[A] < Feld[B] then
+             Begin;
+               S := Feld[A];
+               Feld[A] := Feld[B];
+               Feld[B] := S;
+             End;
+
+  For a := 1 to 10 Do
+      Begin;
+        GotoXY(40, A); Write('Feld(',A,') = ', Feld[A]);
+      End;
+
+  Repeat;
+  Until KeyPressed;
+End.
