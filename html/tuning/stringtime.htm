@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<title>String time</title>
+	<style type="text/css">
+		body {
+			background: url(stringtime.jpg) no-repeat;
+		}
+		.tuning_img {
+			width: 1024px;
+			height: 768px;
+			background: url(stringtimetuned.jpg) no-repeat;
+			-webkit-transition: all 1s linear;
+			   -moz-transition: all 1s linear;
+			    -ms-transition: all 1s linear;
+			     -o-transition: all 1s linear;
+			        transition: all 1s linear;
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			filter: alpha(opacity=0);
+			-moz-opacity:0;
+			-khtml-opacity: 0;
+			opacity: 0;
+		}
+
+		.naked .tuning_img {
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			filter: alpha(opacity=100);
+			-moz-opacity:1;
+			-khtml-opacity: 1;
+			opacity: 1;
+		}
+		
+		.tuning_link, .naked .original_link {
+			display: none;
+		}
+		.naked .tuning_link {
+			display: block;
+		}
+		
+		* {
+			margin: 0;
+			padding : 0;
+			font-family: 'Verdana'; 
+		}
+		
+		a {
+			text-decoration: none; 
+			color:#5522FF;
+		}
+		a:hover {
+			text-decoration: underline;
+			color:red;
+		}
+		ul {
+			position:absolute; 
+			top:10px; 
+			left:10px;
+		}
+		ul li {
+			list-style: none;
+			float: left;
+			background-color:#D6EFFA; 
+			font-size:10pt; 
+			letter-spacing: 0.4px; 
+			text-align:center; 
+			margin: 2px;
+		}
+		ul li a {
+			display: block;
+			padding: 5px;
+			width:130px;
+		}	
+	</style>
+	<script language="JavaScript" type="text/javascript">
+		function change () {
+			var b = document.getElementsByTagName('body')[0];
+			document.getElementById("text").innerHTML = (b.getAttribute("class") ? "Upgrade" : "Back");
+			b.setAttribute("class", (b.getAttribute("class") ? "" : "naked"));
+		}
+	</script>
+</head>
+<body>
+	<div class="tuning_img"></div>
+	<ul>
+		<li><a href="javascript: void(0)" onclick="change()" id='text'>Upgrade</a></li>
+		<li class="original_link"><a target='_blank' href="stringtime.jpg"  title='Download original image (ca. 320kb)'>Download Image</a></li>
+		<li class="tuning_link"><a target='_blank' href="stringtimetuned.jpg" title='Download upgraded image (ca. 440kb)'>Download Image</a></li>
+	</ul>
+</body>
+</html>

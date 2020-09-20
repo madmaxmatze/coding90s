@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<!--
+		THIS IS NOT THE ORIGINAL SCRIPT FROM 2001. THIS WAS JUST TO EMBARASSING...
+	-->
+	<meta charset="utf-8">
+    <title>Pimp my ride</title>
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+	<style type="text/css">
+		html {
+			overflow: hidden;
+		}
+		body {
+			background: url('carbg.jpg') 0 0 no-repeat;
+		}
+		* {
+			margin: 0;
+			padding : 0;
+			font-family: 'Verdana'; 
+		}
+		a {
+			font-weight: normal;
+			cursor: pointer;
+			text-decoration: none; 
+			color:#5522FF;
+		}
+		a.active {
+			font-weight: bold;
+		}
+		a:hover {
+			text-decoration: underline;
+			color:red;
+		}
+		img {
+			position:absolute; 
+			display: none;
+		}
+		
+		table {
+			position:absolute;
+			left:3px;
+			margin:0px;
+			border-spacing:0px;
+			padding:0px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		td, th {
+			font-size:10pt;
+			vertical-align:middle;
+			text-align:center;
+			height:23px;
+			width:130px;
+		}
+		th {
+			color: white;
+			background-color: rgba(85, 34, 255, 0.5);
+		}
+		
+		#rahmen {
+			position:absolute;
+			left:-10000px;
+			border: dotted 1px white;
+			top:-10000px;
+			overflow: hidden;
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+		#rahmen.active {
+			border: dashed 1px red;
+		}
+	</style>
+	<script language="JavaScript" type="text/javascript">
+		var framePos = {
+			'0' : [10000, 10000, 1, 1],
+			'10' : [507, 326, 189, 50],
+			'11' : [585, 370, 85, 40],
+			'12' : [450, 385, 270, 70],
+			'13' : [195, 305, 275, 155],
+			'16' : [269, 273, 35, 35],
+			'17' : [367, 320, 32, 29],
+			'18' : [275, 205, 40, 80],
+			'19' : [220, 300, 185, 90],
+			'21' : [340, 170, 105, 60],
+			'22' : [460, 260, 105, 35],
+			'23' : [165, 25, 65, 125],
+			'24' : [335, 475, 45, 35],
+			'25' : [120, 260, 40, 60],
+			'26' : [145, 350, 30, 30]
+		};
+		
+        function frame (id) {
+			var active = $("#bild" + id).hasClass("active");
+			$('#rahmen').css("left", framePos[id][0]).css("top", framePos[id][1]).width(framePos[id][2]).height(framePos[id][3]).toggleClass("active", !active);
+        }
+ 
+        function change(ids){
+			var active = $("#bild" + ids[0]).hasClass("active");
+			$('#rahmen').toggleClass("active", active);
+			$.each(ids, function (index, element) {
+				$("#bild" + element).toggleClass("active", !active).fadeTo("slow", active ? 0 : 1);
+				$("table a[rel=" + element + "]").toggleClass("active", !active);
+			});
+	    }
+		
+		$(function() {
+			$("table a").mouseout(function () {
+				frame (0);
+				$(this).attr("javascript: void(0)");
+			}).mouseover(function () {
+				frame ($(this).attr("rel"));
+			}).click(function () {
+				var ids = [$(this).attr("rel")];
+				if (ids[0] == 19) {
+					ids.push(20);
+				} else if (ids[0] == 13) {
+					ids.push(13);
+					ids.push(15);
+				}
+				change(ids);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!--
+	techn. Daten: Renault 19 RT - 16V - Baujahr 1994 - 1,8l - 110 PS - 205km/h Spitze - 1040 KG - Klima - ABS - Servo - 195/55 R15 Alu - alles elektr.
+	-->
+    <img src="car10.jpg" id="bild10" style="left: 511px; top: 330px; width:185px; height: 35px">
+    <img src="car11.jpg" id="bild11" style="left: 504px; top: 364px; width:193px; height: 42px">
+    <img src="car12.jpg" id="bild12" style="left: 460px; top: 405px; width:230px; height: 50px">
+    <img src="car13.jpg" id="bild13" style="left: 205px; top: 307px; width: 36px; height: 85px">
+    <img src="car14.jpg" id="bild14" style="left: 237px; top: 345px; width: 60px; height: 54px">
+    <img src="car15.jpg" id="bild15" style="left: 385px; top: 356px; width: 70px; height:100px">
+    <img src="car16.jpg" id="bild16" style="left: 279px; top: 283px; width: 15px; height: 15px">
+    <img src="car17.jpg" id="bild17" style="left: 377px; top: 322px; width: 12px; height: 19px">
+    <img src="car18.jpg" id="bild18" style="left: 265px; top: 215px; width: 60px; height: 60px">
+    <img src="car19.jpg" id="bild19" style="left: 240px; top: 320px; width:110px; height: 45px">
+    <img src="car20.jpg" id="bild20" style="left: 350px; top: 346px; width: 35px; height: 20px">
+    <img src="car21.jpg" id="bild21" style="left: 350px; top: 180px; width: 85px; height: 40px">
+    <img src="car22.jpg" id="bild22" style="left: 470px; top: 270px; width: 90px; height: 20px">
+    <img src="car23.jpg" id="bild23" style="left: 175px; top:  35px; width: 45px; height:115px">
+    <img src="car24.jpg" id="bild24" style="left: 340px; top: 482px; width: 40px; height: 30px">
+    <img src="car25.jpg" id="bild25" style="left: 125px; top: 265px; width: 30px; height: 50px">
+    <img src="car26.jpg" id="bild26" style="left: 150px; top: 350px; width: 25px; height: 25px">
+
+	<div id="rahmen"></div>
+
+	<table style="top:40px;">
+		<tr><th>WHEELS</th></tr>
+		<tr><td><a rel="13">Breite Reifen</a></td></tr>
+	</table>
+
+	<table style="top:97px;">
+		<tr><th>KAROSSERIE</th></tr>
+		<tr><td><a rel="10">Böser Blick</a></td></tr>
+		<tr><td><a rel="12">Bullige Sch&uuml;rze</a></td></tr>
+		<tr><td><a rel="18">B-Säule</a></td></tr>
+	</table>
+
+	<table style="position: absolute; top:208px;">
+		<tr><th>CLEANEN</th></tr>
+		<tr><td><a rel="11">Nummernschild</a> </td></tr>
+		<tr><td><a rel="16">Schloss</a></td></tr>
+		<tr><td><a rel="17">Blinker</a></td></tr>
+		<tr><td><a rel="19">Zierleiste</a></td></tr>
+		<tr><td><a rel="21">Antenne</a></td></tr>
+		<tr><td><a rel="22">Scheibenwischer</a></td></tr>
+	</table>
+
+	<table style="top:395px;">
+		<tr><th>BONUS</th></tr>
+		<tr><td><a rel="23">Laterne</a></td></tr>
+		<tr><td><a rel="24">Müll</a></td></tr>
+		<tr><td><a rel="25">Mülleimer</a></td></tr>
+		<tr><td><a rel="26">Hose</a></td></tr>
+	</table>
+
+	<a onclick="change([10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27])" style="position:absolute; top:563px; left:2px">[All]</a>
+</html>
