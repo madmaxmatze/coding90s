@@ -1,5 +1,9 @@
 # The projects from my teenage years
 
+### :arrow_forward: Check out the Best Project: [Bubbles2000](/delphi/2000_bubbles "Bubbles2000") :arrow_backward:
+
+<br>
+
 Recenty I stumbled upon a quote which stuck in my head for a few days:
 
 <blockquote>
@@ -26,7 +30,6 @@ What I found is not less then the result of probably thousands of hours of codin
 ```
 The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 ```
-
 
 
 # 1996 (age 13)
