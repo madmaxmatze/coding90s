@@ -78,7 +78,8 @@ The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 </a></b><br>
 #1996 #qbasic<br>
 <a href="https://github.com/madmaxmatze/coding90s/tree/master/qbasic/1996_mouse" title="Mouse" target="_blank">
-	<img alt="Mouse" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1996_mouse/3d_button.png" />
+<img alt="Paint" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1996_mouse/mal.png" /><br>
+<img alt="Button" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1996_mouse/3d_button.png" />
 </a>
 
 
@@ -138,7 +139,8 @@ The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 </a></b><br>
 #1997 #qbasic<br>
 <a href="https://github.com/madmaxmatze/coding90s/tree/master/qbasic/1997_uhr" title="Clock" target="_blank">
-	<img alt="Clock" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1997_uhr/screenshots/uhr2.png" />
+<img alt="Clock Analog" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1997_uhr/screenshots/uhr1.png" /><br>
+<img alt="Clock Digital" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1997_uhr/screenshots/uhr2.png" />
 </a>
 
 
@@ -148,7 +150,8 @@ The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 </a></b><br>
 #1997 #qbasic<br>
 <a href="https://github.com/madmaxmatze/coding90s/tree/master/qbasic/1997_calc" title="Calculator" target="_blank">
-	<img alt="Calculator" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1997_calc/calc.png" />
+<img alt="Calculator" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1997_calc/calc.png" /><br>
+<img alt="Calculator with Mouse" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1997_calc/calc_with_mouse.png" />
 </a>
 
 
@@ -188,7 +191,9 @@ The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 </a></b><br>
 #1998 #qbasic<br>
 <a href="https://github.com/madmaxmatze/coding90s/tree/master/qbasic/1998_math" title="Math" target="_blank">
-	<img alt="Math" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1998_math/screenshots/sin.png" />
+	<img alt="Math" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1998_math/screenshots/sin.png" /><br>
+   <img alt="Math" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1998_math/screenshots/kreis.png" />
+
 </a>
 
 
@@ -208,7 +213,7 @@ The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 </a></b><br>
 #1998 #qbasic<br>
 <a href="https://github.com/madmaxmatze/coding90s/tree/master/qbasic/1998_vier_gewinnt" title="Vier gewinnt" target="_blank">
-	<img alt="Vier gewinnt" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1998_vier_gewinnt/4end.png" />
+	<img alt="Vier gewinnt" src="https://raw.github.com/madmaxmatze/coding90s/master/qbasic/1998_vier_gewinnt/vier.gif" />
 </a>
 
 
@@ -263,11 +268,11 @@ The Qbasic and Pascal programs can be run with: http://www.dosbox.com
 
 
 
-<b><a href="https://github.com/madmaxmatze/coding90s/tree/master/visualbasic" title="Sinus" target="_blank">
+<b><a href="https://github.com/madmaxmatze/coding90s/tree/master/visualbasic/1998_sinus" title="Sinus" target="_blank">
 	Sinus
 </a></b><br>
 #1998 #VB<br>
-<a href="https://github.com/madmaxmatze/coding90s/tree/master/visualbasic" title="Sinus" target="_blank">
+<a href="https://github.com/madmaxmatze/coding90s/tree/master/visualbasic/1998_sinus" title="Sinus" target="_blank">
 	<img alt="Sinus" src="https://raw.github.com/madmaxmatze/coding90s/master/visualbasic/1998_sinus/sin.png" />
 </a>
 
