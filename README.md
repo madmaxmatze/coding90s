@@ -1,6 +1,6 @@
 # The projects from my teenage years
 
-### :arrow_forward: Check out the Best Project: [Bubbles2000](/delphi/2000_bubbles "Bubbles2000") :arrow_backward:
+### :arrow_forward: Check out my best Project: [Bubbles2000](/delphi/2000_bubbles "Bubbles2000") :arrow_backward:
 
 <br>
 
@@ -11,20 +11,14 @@ I'm a lousy programmer. However, I am less lousy than I was last year, and signi
 <a href="http://www.hanselman.com/blog/YouAreNotYourCode.aspx" target="_blank">[source]</a>
 </blockquote>
 
-<p>
 This is obviously true, but I asked myself: How lousy have I been? 
 How and what did I actually start to code? 
 And most important, where is all the stuff I wrote when I was a teenager? 
-</p>
 
-<p>
 After a few hours of investigation I found a little 8 letter (!) folder called "<b>CODESAVE</b>" in the clouds. 
-I can only guess that it ended up there after a long journey starting on dozens of floppy disks, over CD-R, DVD and USB-Sticks. 
-</p>
+I can only guess that it ended up there after a long journey starting on floppy disks, over CD-R and DVD to USB-Sticks. 
 
-<p>
-What I found is not less then the result of probably thousands of hours of coding I did from 1996 to 2000 at the age of 13 to 17. In these early teenage years - before the "discoveries of the later teenage years" and the <a href="/evolution">Internet</a> changed my focus a little - I used Qbasic, VisualBasic, Pascal and Delphi5 to develop many little tools and games. Of course not every line of code is brilliant, or even good, but that's okay, because they helped me to get less lousy...
-</p>
+What I found is not less then the result of probably thousands of hours of coding I did from 1996 to 2000 at the age of 13 to 17. In these years - before the "discoveries of later teenage years" and the Internet distracted me a little - I used Qbasic, VisualBasic, Pascal and Delphi5 to develop many little tools and games. Of course not every line of code is brilliant, or even good, but that's okay, because they helped me to get less lousy...
 
 
 ```
